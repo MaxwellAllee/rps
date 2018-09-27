@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+
+
+</head>
+
+<body class="text-light" style="background-color:	#15133B">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <H1 class="text-center">
+                    Rock, Paper, Scissors, Spock, and Lizard
+                </H1>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12 text-center instruction">
+                <form>
+                    <div class="form-group">
+                        <input id="player" type="text" placeholder="Display Name"><input id="playerN" class="btn-secondary"
+                            type="submit">
+                        <button id="reset" type="reset">reset</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card ml-4 w-100">
+                    <div class="card-body ">
+                        <blockquote class="blockquote mb-0 scroll">
+                            <div id="textHer"></div>
+                        </blockquote>
+                    </div>
+                </div>
+                <form>
+                    <div class="input-group mb-3 ml-4 ">
+                        <input type="text" class="form-control" id="chatTxt" placeholder="enter some text">
+                        <div class="input-group-append">
+                            <button class="btn  btn-secondary" type="submit" id="button-addon2">Button</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4 text-center picArea">
+                <img src="assets/images/Clear.png" id="pht" height="400" width="400" alt="diagram" usemap="#spocks">
+                <map name="spocks">
+                    <area class="guess" shape="circle" coords="88,180,48" alt="paper" data-gues="paper">
+                    <area class="guess" shape="circle" coords="310,180,48" alt="lizard" data-gues="lizard">
+                    <area class="guess" shape="circle" coords="200,92,48" alt="rock" data-gues="rock">
+                    <area class="guess" shape="circle" coords="132,306,48" alt="scissor" data-gues="scissor">
+                    <area class="guess" shape="circle" coords="266,306,48" alt="spock" data-gues="spock">
+                </map>
+            </div>
+            <div class="col-md-3  boxControl ">
+                <table class="table table-bordered table-dark">
+                    <thead>
+                        <tr class="bg-primary">
+                            <th scope="col">Winner</th>
+                            <th scope="col">Loser</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tableStuff">
+                        
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 results text-center">
+
+            </div>
+        </div>
+
+
+        <script src="main.js"></script>
+</body>
+
+</html>
